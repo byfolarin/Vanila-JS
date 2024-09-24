@@ -9,18 +9,26 @@ window.onload = function() {
 
 
  
-  buttonStart.addEventListener("click", ()=>{
-    console.log("Start")
-  })
+  function getStart (){
+    buttonStart.addEventListener("click", ()=>{
+      console.log("Start")
+    })
+  }
+ 
 
+    function getStop (){
+      buttonStop.addEventListener("click", ()=>{
+        console.log("Stop")
+      })
+    }
+    
 
-  buttonStop.addEventListener("click", ()=>{
-    console.log("Stop")
-  })
-
-  buttonReset.addEventListener("click", ()=>{
-    console.log("Reset")
-  })
+    function getRestart (){
+      buttonReset.addEventListener("click", ()=>{
+        console.log("Reset")
+      })
+    }
+ 
   
   
 
