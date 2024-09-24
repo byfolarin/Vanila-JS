@@ -22,6 +22,9 @@ window.onload = function() {
 
     
       buttonReset.addEventListener("click", ()=>{
+          clearInterval(interval);
+          let tensTime = 00;
+          let secondsTime = 00;         
           seconds.innerHTML=secondsTime
           tens.innerHTML=tensTime
       })
