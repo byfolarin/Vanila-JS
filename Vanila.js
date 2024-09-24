@@ -1,6 +1,4 @@
 window.onload = function() {
-  let secondsTime = 00;
-  let tensTime = 00;
   let buttonStart = document.getElementById("button-start")
   let buttonStop = document.getElementById("button-stop")
   let buttonReset = document.getElementById("button-reset") 
@@ -19,7 +17,7 @@ window.onload = function() {
  
 
       buttonStop.addEventListener("click", ()=>{
-        console.log("Stop")
+        clearInterval(interval);
       })
 
     
@@ -27,6 +25,10 @@ window.onload = function() {
           seconds.innerHTML=secondsTime
           tens.innerHTML=tensTime
       })
+
+
+
+      
  
  
   
