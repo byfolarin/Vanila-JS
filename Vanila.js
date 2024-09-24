@@ -5,26 +5,29 @@ window.onload = function() {
 
   let seconds = document.getElementById("seconds")
   let tens = document.getElementById("tens")
-  let interval;
+  let Interval;
 
 
  
 
     buttonStart.addEventListener("click", ()=>{
-      console.log("Start")
+      setInterval(,1000)
+      let tensTime = 0;
+      let secondsTime = 0;  
+      seconds.innerHTML = secondsTime
+      tens.innerHTML =tensTime
     })
 
  
 
       buttonStop.addEventListener("click", ()=>{
-        clearInterval(interval);
+        clearInterval(Interval)
       })
 
     
       buttonReset.addEventListener("click", ()=>{
-          clearInterval(interval);
-          let tensTime = 00;
-          let secondsTime = 00;         
+          let tensTime = 0+"0";
+          let secondsTime = 0+"0";         
           seconds.innerHTML=secondsTime
           tens.innerHTML=tensTime
       })
