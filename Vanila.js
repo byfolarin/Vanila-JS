@@ -1,5 +1,6 @@
 window.onload = function() {
-  let secondsTime = "00";
+  let secondsTime = 00;
+  let tensTime = 00;
   let buttonStart = document.getElementById("button-start")
   let buttonStop = document.getElementById("button-stop")
   let buttonReset = document.getElementById("button-reset") 
@@ -10,23 +11,23 @@ window.onload = function() {
 
 
  
-  function getStart (){
+
     buttonStart.addEventListener("click", ()=>{
       console.log("Start")
     })
-  }
+
  
-    function getStop (){
+
       buttonStop.addEventListener("click", ()=>{
         console.log("Stop")
       })
-    }
+
     
-    function getRestart (){
       buttonReset.addEventListener("click", ()=>{
-        console.log("Reset")
+          seconds.innerHTML=secondsTime
+          tens.innerHTML=tensTime
       })
-    }
+ 
  
   
   
