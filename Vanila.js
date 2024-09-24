@@ -47,6 +47,4 @@ window.onload = function() {
   }
       )
 
-
-
 };
