@@ -6,6 +6,7 @@ window.onload = function() {
 
   let seconds = document.getElementById("seconds")
   let tens = document.getElementById("tens")
+  let interval;
 
 
  
@@ -15,14 +16,12 @@ window.onload = function() {
     })
   }
  
-
     function getStop (){
       buttonStop.addEventListener("click", ()=>{
         console.log("Stop")
       })
     }
     
-
     function getRestart (){
       buttonReset.addEventListener("click", ()=>{
         console.log("Reset")
