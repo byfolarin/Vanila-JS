@@ -7,11 +7,13 @@ window.onload = function() {
   let tens = document.getElementById("tens")
   let Interval;
 
+  let tensTime = 0;
+  let secondsTime = 0;  
+
 
  
 
     buttonStart.addEventListener("click", ()=>{
-      setInterval(,1000)
       let tensTime = 0;
       let secondsTime = 0;  
       seconds.innerHTML = secondsTime
@@ -32,6 +34,11 @@ window.onload = function() {
           tens.innerHTML=tensTime
       })
 
+
+    function startTime (){
+      tensTime++
+      
+    }
 
 
       
