@@ -8,11 +8,13 @@ window.onload = function() {
   let tens = document.getElementById("tens")
 
 
-  function startButton (){
-    buttonStart.addEventListener(click, "Hello")
-  }
+ 
+    buttonStart.addEventListener(click, ()=>{
+      console.log("Hey")
+    })
+  
 
-  console.log(startButton)
+
 
 
 
