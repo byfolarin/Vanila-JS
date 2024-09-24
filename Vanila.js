@@ -5,7 +5,6 @@ window.onload = function() {
 
   let seconds = document.getElementById("seconds")
   let tens = document.getElementById("tens")
-  let Interval;
 
 
   let tensTime = 0;
