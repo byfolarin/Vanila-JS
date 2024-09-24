@@ -38,41 +38,15 @@ window.onload = function() {
   });
 
     
-      buttonReset.addEventListener("click", ()=>{
-          let tensTime = 0+"0";
-          let secondsTime = 0+"0";         
-          seconds.innerHTML=secondsTime
-          tens.innerHTML=tensTime
-      })
-
-
-   
-
-
-      
- 
- 
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  buttonReset.addEventListener("click", () => {
+    clearInterval(timer);
+    timer = null;
+    tensTime = 0;
+    secondsTime = 0;
+    tens.innerHTML = "00";
+    seconds.innerHTML = "00";
+  }
+      )
 
 
 
