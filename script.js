@@ -95,7 +95,7 @@ function fetchUserData() {
 fetchUserData();
 
 
-function fetchWeatherData() {
+function fetchUserData() {
     fetch('https://randomuser.me/api/')
         .then(response => response.json())
         .then(data => {
