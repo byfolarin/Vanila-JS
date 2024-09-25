@@ -1,19 +1,19 @@
-const data = { name: 'John Doe', email: 'john@example.com' };
+// const data = { name: 'John Doe', email: 'john@example.com' };
 
-fetch('https://api.example.com/users', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-})
-.catch(error => {
-  console.error('Error:', error);
-});
+// fetch('https://api.example.com/users', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify(data)
+// })
+// .then(response => response.json())
+// .then(data => {
+//   console.log('Success:', data);
+// })
+// .catch(error => {
+//   console.error('Error:', error);
+// });
 
 
 
@@ -64,7 +64,31 @@ fetch('https://api.example.com/users', {
 // That covers the basics of using the Fetch API in JavaScript. Let me know if you have any other questions!
 
 
-fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log(data));
-  
+// fetch('https://api.example.com/data')
+//   .then(response => response.json())
+//   .then(data => console.log(data));
+
+
+
+function fetchUserData() {
+    fetch('https://randomuser.me/api/')
+        .then(response => response.json())
+        .then(data => {
+            const user = data.results[0];
+            const userHtml = `
+                <img src="${user.picture.large}" alt="User Avatar">
+                <h2>${user.name.first} ${user.name.last}</h2>
+                <p>Email: ${user.email}</p>
+                <p>Phone: ${user.phone}</p>
+                <p>Location: ${user.location.city}, ${user.location.country}</p>
+            `;
+            document.getElementById('userData').innerHTML = userHtml;
+        })
+        .catch(error => {
+            console.error('Error fetching user data:', error);
+            document.getElementById('userData').innerHTML = '<p>Error loading user data.</p>';
+        });
+}
+
+// Call the function when the page loads
+fetchUserData();
