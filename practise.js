@@ -1,20 +1,15 @@
-
 function getBooks() {
     fetch('books.json')
         .then(response => response.json())
         .then(data => {
-            // Log all book titles
+            let allTitlesHTML = '';
             data.books.forEach(book => {
-                const bookTitle = book
-                
+                console.log(book.title);
+                allTitlesHTML += `<p>${book.title}</p>`;
             });
-              const bookTitles = `<p>${bookTitle}</p>`
-            document.getElementById('bookTitle').innerHTML=bookTitles
+            document.getElementById('bookList').innerHTML = allTitlesHTML;
         })
         .catch(error => {
             console.error('Error:', error);
         });
 }
-
-// Call the function
-getBooks();
