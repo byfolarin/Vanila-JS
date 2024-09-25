@@ -1,0 +1,44 @@
+{
+    "books": [
+      {
+        "id": 1,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": 1960,
+        "genre": "Fiction",
+        "rating": 4.27
+      },
+      {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "genre": "Science Fiction",
+        "rating": 4.18
+      },
+      {
+        "id": 3,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "year": 1813,
+        "genre": "Romance",
+        "rating": 4.25
+      },
+      {
+        "id": 4,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "year": 1937,
+        "genre": "Fantasy",
+        "rating": 4.27
+      },
+      {
+        "id": 5,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "year": 1951,
+        "genre": "Fiction",
+        "rating": 3.81
+      }
+    ]
+  }

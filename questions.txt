@@ -1,0 +1,18 @@
+Write a fetch request to get the books data from 'books.json'.
+
+After fetching the data, log all book titles to the console.
+
+Create a function that fetches the data and returns an array of all authors.
+
+Fetch the data and find the book with the highest rating. Log its title and rating.
+
+Write a function that takes a genre as an argument, fetches the data, and returns an array of books in that genre.
+
+Fetch the data and calculate the average publication year of all books.
+
+Create a function that fetches the data and returns the book published most recently.
+
+Write a fetch request that logs the number of books in the list.
+Fetch the data and create an HTML list of all books, displaying the title and author for each.
+
+Write a function that takes an author name as an argument, fetches the data, and returns all books by that author.
