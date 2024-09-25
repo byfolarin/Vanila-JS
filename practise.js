@@ -20,5 +20,15 @@ window.addEventListener('load', getBooks );
 
 
 function getAuthors (){
+    fetch('books.json')
+        .then(response=>response.json())
+        .then(data =>{
+            let allAuthors = data.books.map(book => book.author);
+            return allAuthors;
+        })
     
 }
+
+getAuthors().then(authors => {
+    console.log("Authors:", authors);
+});
