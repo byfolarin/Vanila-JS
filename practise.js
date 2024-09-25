@@ -1,8 +1,6 @@
 function getBooks() {
-    console.log('Fetching books...');
     fetch('books.json')
         .then(response => {
-            console.log('Response received:', response);
             return response.json();
         })
         .then(data => {
@@ -18,5 +16,9 @@ function getBooks() {
         });
 }
 
-// Call the function when the page loads
-window.addEventListener('load', getBooks);
+window.addEventListener('load', getBooks );
+
+
+function getAuthors (){
+    
+}
