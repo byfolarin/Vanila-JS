@@ -80,6 +80,32 @@ function fetchUserData() {
                 <h2>${user.name.first} ${user.name.last}</h2>
                 <p>Email: ${user.email}</p>
                 <p>Phone: ${user.phone}</p>
+                <p>Gender: ${user.gender}
+                <p>Location: ${user.location.city}, ${user.location.country}</p>
+            `;
+            document.getElementById('userData').innerHTML = userHtml;
+        })
+        .catch(error => {
+            console.error('Error fetching user data:', error);
+            document.getElementById('userData').innerHTML = '<p>Error loading user data.</p>';
+        });
+}
+
+// Call the function when the page loads
+fetchUserData();
+
+
+function fetchWeatherData() {
+    fetch('https://randomuser.me/api/')
+        .then(response => response.json())
+        .then(data => {
+            const user = data.results[0];
+            const userHtml = `
+                <img src="${user.picture.large}" alt="User Avatar">
+                <h2>${user.name.first} ${user.name.last}</h2>
+                <p>Email: ${user.email}</p>
+                <p>Phone: ${user.phone}</p>
+                <p>Gender: ${user.gender}
                 <p>Location: ${user.location.city}, ${user.location.country}</p>
             `;
             document.getElementById('userData').innerHTML = userHtml;
