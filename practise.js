@@ -24,11 +24,11 @@ function getAuthors (){
         .then(response=>response.json())
         .then(data =>{
             let allAuthors = data.books.map(book => book.author);
-            return allAuthors;
+            const authorList = document.getElementById('authorList');
+
         })
     
 }
 
-getAuthors().then(authors => {
-    console.log("Authors:", authors);
-});
+
+window.addEventListener('load', getAuthors);
