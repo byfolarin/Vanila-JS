@@ -64,9 +64,9 @@
 // That covers the basics of using the Fetch API in JavaScript. Let me know if you have any other questions!
 
 
-// fetch('https://api.example.com/data')
-//   .then(response => response.json())
-//   .then(data => console.log(data));
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data));
 
 
 
