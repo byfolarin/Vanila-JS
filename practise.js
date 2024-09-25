@@ -1,15 +1,22 @@
 function getBooks() {
+    console.log('Fetching books...');
     fetch('books.json')
-        .then(response => response.json())
+        .then(response => {
+            console.log('Response received:', response);
+            return response.json();
+        })
         .then(data => {
             let allTitlesHTML = '';
             data.books.forEach(book => {
-                console.log(book.title);
                 allTitlesHTML += `<p>${book.title}</p>`;
             });
-            document.getElementById('bookList').innerHTML = allTitlesHTML;
+            const bookListElement = document.getElementById('bookList');
+            bookListElement.innerHTML = allTitlesHTML;
         })
         .catch(error => {
-            throw new Error('Error:', error);
+            console.error('Error:', error);
         });
 }
+
+// Call the function when the page loads
+window.addEventListener('load', getBooks);
