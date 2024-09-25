@@ -64,61 +64,61 @@
 // That covers the basics of using the Fetch API in JavaScript. Let me know if you have any other questions!
 
 
-fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log(data));
+// fetch('https://api.example.com/data')
+//   .then(response => response.json())
+//   .then(data => console.log(data));
 
 
 
-function fetchUserData() {
-    fetch('https://randomuser.me/api/')
-        .then(response => response.json())
-        .then(data => {
-            const user = data.results[0];
-            const userHtml = `
-                <img src="${user.picture.large}" alt="User Avatar">
-                <h2>${user.name.first} ${user.name.last}</h2>
-                <p>Email: ${user.email}</p>
-                <p>Phone: ${user.phone}</p>
-                <p>Gender: ${user.gender}
-                <p>Location: ${user.location.city}, ${user.location.country}</p>
-            `;
-            document.getElementById('userData').innerHTML = userHtml;
-        })
-        .catch(error => {
-            console.error('Error fetching user data:', error);
-            document.getElementById('userData').innerHTML = '<p>Error loading user data.</p>';
-        });
-}
+// function fetchUserData() {
+//     fetch('https://randomuser.me/api/')
+//         .then(response => response.json())
+//         .then(data => {
+//             const user = data.results[0];
+//             const userHtml = `
+//                 <img src="${user.picture.large}" alt="User Avatar">
+//                 <h2>${user.name.first} ${user.name.last}</h2>
+//                 <p>Email: ${user.email}</p>
+//                 <p>Phone: ${user.phone}</p>
+//                 <p>Gender: ${user.gender}
+//                 <p>Location: ${user.location.city}, ${user.location.country}</p>
+//             `;
+//             document.getElementById('userData').innerHTML = userHtml;
+//         })
+//         .catch(error => {
+//             console.error('Error fetching user data:', error);
+//             document.getElementById('userData').innerHTML = '<p>Error loading user data.</p>';
+//         });
+// }
 
-// Call the function when the page loads
-fetchUserData();
+// // Call the function when the page loads
+// fetchUserData();
 
 
-function fetchUserData() {
-    fetch('https://randomuser.me/api/')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error ${response.status}`);
-              }  return response.json()
-        })
-        .then(data => {
-            const user = data.results[0];
-            const userHtml = `
-                <img src="${user.picture.large}" alt="User Avatar">
-                <h2>${user.name.first} ${user.name.last}</h2>
-                <p>Email: ${user.email}</p>
-                <p>Phone: ${user.phone}</p>
-                <p>Gender: ${user.gender}
-                <p>Location: ${user.location.city}, ${user.location.country}</p>
-            `;
-            document.getElementById('userData').innerHTML = userHtml;
-        })
-        .catch(error => {
-            console.error('Error fetching user data:', error);
-            document.getElementById('userData').innerHTML = '<p>Error loading user data.</p>';
-        });
-}
+// function fetchUserData() {
+//     fetch('https://randomuser.me/api/')
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error(`HTTP error ${response.status}`);
+//               }  return response.json()
+//         })
+//         .then(data => {
+//             const user = data.results[0];
+//             const userHtml = `
+//                 <img src="${user.picture.large}" alt="User Avatar">
+//                 <h2>${user.name.first} ${user.name.last}</h2>
+//                 <p>Email: ${user.email}</p>
+//                 <p>Phone: ${user.phone}</p>
+//                 <p>Gender: ${user.gender}
+//                 <p>Location: ${user.location.city}, ${user.location.country}</p>
+//             `;
+//             document.getElementById('userData').innerHTML = userHtml;
+//         })
+//         .catch(error => {
+//             console.error('Error fetching user data:', error);
+//             document.getElementById('userData').innerHTML = '<p>Error loading user data.</p>';
+//         });
+// }
 
-// Call the function when the page loads
-fetchUserData();
+// // Call the function when the page loads
+// fetchUserData();
