@@ -52,9 +52,12 @@ getAuthors()
                     const ratings = data.books.map(book => book.rating);
                     const ratingList = document.getElementById('ratingList')     
                     ratingList.innerHTML = ratings
+                    let higherrating = Math.max(...ratings)
+                    let higher = document.getElementById('ratingHigh')
+                    higher.innerHTML = higherrating
             })
 
-            let higherrating = Math.max(...ratings)
+       
     }
     
     getRating();
