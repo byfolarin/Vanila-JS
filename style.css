@@ -18,7 +18,8 @@ img { max-width: 100%;
     }
 
 
-.letsgrid{
+.letgrid{
      display: flex;
+     gap: 4rem;
    
 }

@@ -48,11 +48,13 @@ getAuthors()
     const getRating = () => {
         fetch('books.json')
             .then(response => response.json())
-            .then(data => {              
+            .then(data => {        
                     const ratings = data.books.map(book => book.rating);
-                    ratings.forEach(rating => console.log(rating));
-               
+                    const ratingList = document.getElementById('ratingList')     
+                    ratingList.innerHTML = ratings
             })
+
+            let higherrating = Math.max(...ratings)
     }
     
     getRating();
