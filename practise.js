@@ -46,13 +46,21 @@ getAuthors()
     });
 
 
-const getRating = () =>{
-    fetch('books.json')
-    .then(response => response.json())
-    .then(data => {
-        const ratings = data.ratings
-    })
-}
-
-
-getRating()
+    const getRating = () => {
+        fetch('books.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Received data:', data); 
+                const ratings = data.rating || data.ratings; 
+                if (Array.isArray(ratings)) {
+                    ratings.forEach(rate => console.log(rate));
+                } else {
+                    console.log('Ratings not found or not an array:', ratings);
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    }
+    
+    getRating();
