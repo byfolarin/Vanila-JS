@@ -78,6 +78,7 @@ getAuthors()
         fetch('books.json')
         .then(response => response.json())
         .then(data => {
-            
+            let booktype = genre
+            let allGenre = data.genre
         })
     }
