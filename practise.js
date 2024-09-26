@@ -25,9 +25,8 @@ function getAuthors (){
         .then(data =>{
             let allAuthors = data.books.map(book => book.author);
             const authorList = document.getElementById('authorList');
-
+            authorList.innerHTML=`<p>${allAuthors}</p>`  
         })
-    
 }
 
 
