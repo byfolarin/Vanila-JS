@@ -49,7 +49,10 @@ getAuthors()
 const getRating = () =>{
     fetch('books.json')
     .then(response => response.json())
-    .then(data => data.map(datas =>{
-        datas.console.log()
-    }))
+    .then(data => {
+        const ratings = data.ratings
+    })
 }
+
+
+getRating()
