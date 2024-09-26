@@ -19,15 +19,28 @@ function getBooks() {
 window.addEventListener('load', getBooks );
 
 
-function getAuthors (){
-    fetch('books.json')
-        .then(response=>response.json())
-        .then(data =>{
+function getAuthors() {
+    return fetch('books.json')
+        .then(response => response.json())
+        .then(data => {
             let allAuthors = data.books.map(book => book.author);
-            const authorList = document.getElementById('authorList');
-            authorList.innerHTML=`<p>${allAuthors}</p>`  
+            console.log(allAuthors); // This logs all authors to the console
+            return allAuthors; // This returns the array of authors
         })
+        .catch(error => {
+            console.error('Error:', error);
+            throw error; // Re-throw the error to be handled by the caller
+        });
 }
 
-
-window.addEventListener('load', getAuthors);
+// Usage:
+getAuthors()
+    .then(authors => {
+        console.log("Authors:", authors);
+        // You can use the authors array here
+        const authorList = document.getElementById('authorList');
+        authorList.innerHTML = authors.map(author => `<p>${author}</p>`).join('');
+    })
+    .catch(error => {
+        console.error("Error fetching authors:", error);
+    });
