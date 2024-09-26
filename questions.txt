@@ -4,7 +4,7 @@
 
 *Create a function that fetches the data and returns an array of all authors.
 
-Fetch the data and find the book with the highest rating. Log its title and rating.
+*Fetch the data and find the book with the highest rating. Log its title and rating.
 
 Write a function that takes a genre as an argument, fetches the data, and returns an array of books in that genre.
 
