@@ -48,16 +48,26 @@ getAuthors()
     const getRating = () => {
         fetch('books.json')
             .then(response => response.json())
-            .then(data => {        
-                    const ratings = data.books.map(book => book.rating);
-                    const ratingList = document.getElementById('ratingList')     
-                    ratingList.innerHTML = ratings
-                    let higherrating = Math.max(...ratings)
-                    let higher = document.getElementById('ratingHigh')
-                    higher.innerHTML = higherrating
+            .then(data => {
+                if (data && data.books && Array.isArray(data.books)) {
+                    // Find the book with the highest rating
+                    const highestRatedBook = data.books.reduce((highest, current) => 
+                        current.rating > highest.rating ? current : highest
+                    );
+    
+                    // Log the title and rating of the highest-rated book
+                    console.log(`Highest rated book: "${highestRatedBook.title}" with a rating of ${highestRatedBook.rating}`);
+    
+                    // Optionally, display this information in the HTML
+                    const ratingList = document.getElementById('ratingList');
+                    ratingList.innerHTML = `<p>Highest rated book: "${highestRatedBook.title}" with a rating of ${highestRatedBook.rating}</p>`;
+                } else {
+                    console.log('Data structure is not as expected:', data);
+                }
             })
-
-       
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
     }
     
     getRating();
