@@ -71,3 +71,13 @@ getAuthors()
     }
     
     getRating();
+
+
+
+    function getGenre(genre){
+        fetch('books.json')
+        .then(response => response.json())
+        .then(data => {
+            
+        })
+    }
