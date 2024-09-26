@@ -44,3 +44,12 @@ getAuthors()
     .catch(error => {
         console.error("Error fetching authors:", error);
     });
+
+
+const getRating = () =>{
+    fetch()
+    .then(response => response.json())
+    .then(data => data.map(datas =>{
+        datas.console.log()
+    }))
+}

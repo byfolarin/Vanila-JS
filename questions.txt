@@ -1,8 +1,8 @@
-Write a fetch request to get the books data from 'books.json'.
+*Write a fetch request to get the books data from 'books.json'.
 
-After fetching the data, log all book titles to the console.
+*After fetching the data, log all book titles to the console.
 
-Create a function that fetches the data and returns an array of all authors.
+*Create a function that fetches the data and returns an array of all authors.
 
 Fetch the data and find the book with the highest rating. Log its title and rating.
 
