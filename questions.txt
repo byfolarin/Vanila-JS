@@ -15,4 +15,4 @@ Create a function that fetches the data and returns the book published most rece
 Write a fetch request that logs the number of books in the list.
 Fetch the data and create an HTML list of all books, displaying the title and author for each.
 
-Write a function that takes an author name as an argument, fetches the data, and returns all books by that author.
+Write a function that takes an author name as an argument, fetches the data, and returns all books by that author. 
