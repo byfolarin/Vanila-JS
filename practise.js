@@ -74,11 +74,11 @@ getAuthors()
 
 
 
-    // function getGenre(genre){
-    //     fetch('books.json')
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         let booktype = genre
-    //         let allGenre = data.genre
-    //     })
-    // }
+    function getGenre(genre){
+        fetch('books.json')
+        .then(response => response.json())
+        .then(data => {
+            let booktype = genre
+            let allGenre = data.genre
+        })
+    }
