@@ -74,11 +74,31 @@ getAuthors()
 
 
 
-    function getGenre(genre){
-        fetch('books.json')
-        .then(response => response.json())
-        .then(data => {
-            let booktype = genre
-            let allGenre = data.genre
-        })
+    const fs = require('fs').promises; // Using promises version for cleaner async code
+
+    async function getBooksByGenre(genre) {
+      try {
+        // Read the JSON file
+        const data = await fs.readFile('books.json', 'utf8');
+        
+        // Parse the JSON data
+        const books = JSON.parse(data);
+        
+        // Filter books by the given genre
+        const filteredBooks = books.filter(book => book.genre.toLowerCase() === genre.toLowerCase());
+        
+        return filteredBooks;
+      } catch (error) {
+        console.error('Error:', error);
+        return []; // Return an empty array if there's an error
+      }
     }
+    
+    // Example usage:
+    getBooksByGenre('fantasy')
+      .then(books => {
+        console.log(books);
+      })
+      .catch(error => {
+        console.error('Error in main execution:', error);
+      });
